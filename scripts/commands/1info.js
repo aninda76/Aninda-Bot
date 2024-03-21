@@ -1,15 +1,13 @@
 module.exports.config = {
-  name: "x2",
-  version: "1.0.1", 
-  permssion: 0,
-  premium: false,
-  prefix: false,
-  credits: "Joshua Sy", //don't change the credits please
-  description: "X2 and Bot info .",
-  category: "info",
-  cooldowns: 1,
-  dependencies: 
-  {
+	name: "info",
+	version: "1.0.1", 
+	hasPermssion: 0,
+	credits: "Joshua Sy", //don't change the credits please
+	description: "Admin and Bot info.",
+	commandCategory: "...",
+	cooldowns: 1,
+	dependencies: 
+	{
     "request":"",
     "fs-extra":"",
     "axios":""
@@ -20,57 +18,38 @@ const axios = global.nodemodule["axios"];
 const request = global.nodemodule["request"];
 const fs = global.nodemodule["fs-extra"];
 const time = process.uptime(),
-    hours = Math.floor(time / (60 * 60)),
-    minutes = Math.floor((time % (60 * 60)) / 60),
-    seconds = Math.floor(time % 60);
+		hours = Math.floor(time / (60 * 60)),
+		minutes = Math.floor((time % (60 * 60)) / 60),
+		seconds = Math.floor(time % 60);
 const moment = require("moment-timezone");
-var juswa = moment.tz("Asia/Dhaka").format("『D/MM/YYYY』 【hh:mm:ss】");
-var link = [
-  "https://i.postimg.cc/s2nNXsnX/tanvir6x9official.jpg", 
+var juswa = moment.tz("Asia/Dhaka").format("『D/MM/YYYY』 【HH:mm:ss】");
+var link =["https://i.imgur.com/UwAOBrH.jpg","https://i.imgur.com/BL7g14V.jpg", "https://i.imgur.com/rxOzAxj.jpg",];
+var callback = () => api.sendMessage({body:`➢🄾🅆🄽🄴🅁   🄰🄽🄳   🄱🄾🅃  🄸🄽🄵🄾🤙❗
 
-            "https://i.imgur.com/Ndd1O3P.jpg", 
+⁂𝘽𝙤𝙩 𝙉𝙖𝙢𝙚: ${global.config.BOTNAME}
 
-            "https://i.imgur.com/HTLhzWW.jpg",
+✡𝘽𝙤𝙩 𝙋𝙧𝙚𝙛𝙞𝙭: ${global.config.PREFIX}
 
-            "https://i.imgur.com/DA7EoVx.jpg",
+✫𝘽𝙤𝙩 𝙊𝙬𝙣𝙚𝙧🌼 :♦️A͟n͟i͟n͟d͟a͟😙🌸♦️,
 
-            "https://i.imgur.com/VEZNUzP.jpg",
+✬𝐅𝐛 𝐋𝐢𝐧𝐤: ♣️
+https://www.facebook.com/aninda.sarkar.tridip
 
-            "https://i.imgur.com/N2tNu0u.jpg",
+➳✴️𝙈𝘼𝙎𝙏𝙀𝙍 𝙊𝙁 𝘽𝙊𝙏'𝙎 𝙄𝙉𝙎𝙄𝘿𝙀✴️
 
-  "https://i.postimg.cc/s2nNXsnX/tanvir6x9official.jpg"
-           ];
+🔰𝘽𝙤𝙩 𝘼𝙙𝙢𝙞𝙣𝙨🔰: [𝗔𝗻𝗶𝗻𝗱𝗮🖤]
 
-var callback = () => api.sendMessage({body:` ═════════════🄾🅆🄽🄴🅁════════════
 
-♻️OWNER : HAMIM AHMADX 
+➳𝙐𝙥𝙩𝙞𝙢𝙚 𝙑𝙚𝙧𝙨𝙞𝙤𝙣 ✨: 30.0.1
 
-👤GENDER : MALE
+✬𝐌𝐨𝐝𝐢𝐟𝐢𝐞𝐝 𝐁𝐲 : 🇦 🇳 🇮 🇳 🇩 🇦 🔰
 
-🔰AGE : 17
+✬𝙏𝙤𝙙𝙖𝙮 𝙞𝙨📜: ${juswa} 
 
-🔰ADDRESS: CHATTOGRAM, BANGLADESH
+➳𝘽𝙤𝙩 𝙞𝙨 𝙍𝙪𝙣𝙣𝙞𝙣𝙜⌚ ${hours}:${minutes}:${seconds}.
 
-═══════════🄲🄾🄽🅃🄰🄲🅃════════════
+🔻𝐁𝐎𝐓 𝐔𝐍𝐃𝐄𝐑 𝐏𝐑𝐎𝐓𝐄𝐂𝐓𝐄𝐃 𝐁𝐘 𝐀𝐃𝐌𝐈𝐍𝐒🔺 
 
-USE [ /admin ] FOR CONTACT
-
-🔰WEBSITE: https://hamim-website.h4m1mx2.repl.co/
-
-USE [ /admin ] FOR CONTACT
-
-════════════🅄🄿🅃🄸🄼🄴════════════
-
-TODAY IS TIME : ${juswa} 
-
-BOT IS RUNNING ${hours}:${minutes}:${seconds}.
-
-BOT NAME : X2 BOT 🤙
-
-BOT PREFIX : 💠 ${global.config.PREFIX} 💠
-
-═════════════════════════════════
-
-𝗜 𝗔𝗠 𝗡𝗢𝗧 𝗔 𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥,\n𝗜 𝗔𝗠 𝗔 𝗠𝗢𝗗𝗜𝗙𝗜𝗘𝗥`,attachment: fs.createReadStream(__dirname + "/cache/juswa.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/juswa.jpg")); 
+✫𝙏𝙝𝙖𝙣𝙠𝙨 𝙁𝙤𝙧 𝙐𝙨𝙞𝙣𝙜 ${global.config.BOTNAME} Bot!`,attachment: fs.createReadStream(__dirname + "/cache/juswa.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/juswa.jpg")); 
       return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/juswa.jpg")).on("close",() => callback());
    };
