@@ -2,10 +2,10 @@ const fs = require("fs");
 module.exports.config = {
 	name: "𝐏𝐑𝐄𝐅𝐈𝐗",
     version: "1.0.2",
-	haspermssion: 0,
+	permission: 0,
 	credits: "Choru Tikokers", 
 	description: "no prefix",
-	commandcategory: "No command marks needed",
+	category: "No command marks needed",
 	usages: "...",
     cooldowns: 1, 
 };
