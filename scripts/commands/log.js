@@ -3,7 +3,7 @@ module.exports.config = {
   version: "1.0.0",
   permssion: 0,
   premium: false,
-  prefix: true 
+  prefix: true, 
   credits: "MrTomXxX",
   description: "log",
   category: "System",
