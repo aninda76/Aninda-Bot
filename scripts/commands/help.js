@@ -2,6 +2,7 @@ module.exports.config = {
 	name: "help",
 	version: "1.0.2",
 	permssion: 0,
+	Premium: false,
 	credits: "PetterSever",
 	description: "Beginner's Guide",
 	category: "system",
