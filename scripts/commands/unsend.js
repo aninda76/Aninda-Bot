@@ -3,7 +3,7 @@ module.exports.config = {
   version: "1.0.0", 
   permssion: 0,
   premium: false,
-  prefix: false,
+  prefix:  true,
   credits: "hulaanmo",
   description: "Remove Bot's messages",
   category: "System", 
