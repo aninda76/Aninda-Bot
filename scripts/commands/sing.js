@@ -31,12 +31,10 @@ async function downloadMusicFromYoutube(link, path) {
 module.exports.config = {
     name: "sing",
     version: "1.0.0",
-    permssion: 0,
-    premium: false,
-    prefix: true,
-    credits: "Hamim",
+    hasPermssion: 0,
+    credits: "D-Jukie",
     description: "Play music through YouTube link or search keyword",
-    category: "Youtube",
+    commandCategory: "Youtube",
     usages: "[searchMusic]",
     cooldowns: 0
 };
@@ -50,10 +48,10 @@ module.exports.handleReply = async function ({ api, event, handleReply }) {
         if (fs.statSync(path).size > 26214400) return api.sendMessage('» যেই গানটা শুনতে চান এক লাইন লেখেন ,', event.threadID, () => fs.unlinkSync(path), event.messageID);
         api.unsendMessage(handleReply.messageID)
         return api.sendMessage({ 
-            body: `[💝]════𝐇𝟒𝐌𝟏𝐌 ✖ 𝐊𝐎𝐓𝐇𝐀═══[💝]\n[🎀]𝗡𝗔𝗠𝗘:${data.title}\n[⏰]𝗧𝗜𝗠𝗘:${this.convertHMS(data.dur)}\n[🌸]𝗗𝗢𝗡𝗘 𝗜𝗡:${Math.floor((Date.now()-data.timestart)/1000)}\n[🎀]═════🄼🅄🅂🄸🄲══════[🎀]`,
+            body: `[💝]════Aninda═══[💝]\n[🎀]𝗡𝗔𝗠𝗘:${data.title}\n[⏰]𝗧𝗜𝗠𝗘:${this.convertHMS(data.dur)}\n[🌸]𝗗𝗢𝗡𝗘 𝗜𝗡:${Math.floor((Date.now()-data.timestart)/1000)}\n[🎀]═════🄼🅄🅂🄸🄲══════[🎀]`,
             attachment: fs.createReadStream(path)}, event.threadID, ()=> fs.unlinkSync(path), 
          event.messageID)
-
+            
     }
     catch (e) { return console.log(e) }
 }
@@ -82,7 +80,7 @@ module.exports.run = async function ({ api, event, args }) {
                 body: `[💝]════𝐇𝟒𝐌𝟏𝐌 ✖ 𝐊𝐎𝐓𝐇𝐀═══[💝]\n[🎀]𝗡𝗔𝗠𝗘:${data.title}\n[⏰]𝗧𝗜𝗠𝗘:${this.convertHMS(data.dur)}\n[🌸]𝗗𝗢𝗡𝗘 𝗜𝗡:${Math.floor((Date.now()- data.timestart)/1000)}\n[🎀]═════🄼🅄🅂🄸🄲══════[🎀]`,
                 attachment: fs.createReadStream(path)}, event.threadID, ()=> fs.unlinkSync(path), 
             event.messageID)
-
+            
         }
         catch (e) { return console.log(e) }
     } else {
@@ -111,4 +109,4 @@ module.exports.run = async function ({ api, event, args }) {
             return api.sendMessage('An error occurred, please try again in a moment!!\n' + e, event.threadID, event.messageID);
         }
     }
-              }
+          }
