@@ -8,7 +8,7 @@ module.exports.config = {
   description: "Manage bot admin",
   category: "config",
   usages: "[list/add/remove] [userID]",
-    cooldowns: 5,
+    cooldowns: 2,
     dependencies: {
         "fs-extra": ""
     }
