@@ -6,7 +6,7 @@ module.exports.config = {
   prefix: true 
   credits: "MrTomXxX",
   description: "log",
-  commandCategory: "System",
+  category: "System",
   usages: "edit",
   cooldowns: 3,
   denpendencies: {
