@@ -5,11 +5,12 @@ const fs = require('fs');
 module.exports.config = {
   name: "album",
   version: "1.0.0",
-  hasPermssion: 0,
+  permssion: 0,
+  premium: false,
   credits: "Dipto",
   description: "Displays album options for selection.",
   usePrefix: true,
-  commandCategory: "Media",
+  category: "Media",
   usages: "Only or add [cartoon/photo/lofi/sad/islamic/funny/horny/anime/aesthetic/cat/lyrics/love/sigma]",
   cooldowns: 5
 };
