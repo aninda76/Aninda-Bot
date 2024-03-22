@@ -1,10 +1,12 @@
 module.exports.config = {
 	name: "info",
 	version: "1.0.1", 
-	hasPermssion: 0,
+	permssion: 0,
+	premium: false,
+	prefix: true,
 	credits: "Joshua Sy", //don't change the credits please
 	description: "Admin and Bot info.",
-	commandCategory: "...",
+	category: "...",
 	cooldowns: 1,
 	dependencies: 
 	{
