@@ -1,6 +1,9 @@
 module.exports.config = {
 	name: "banking",
 	version: "1.0.0",
+	permssion: 0,
+	premium: false,
+	prefix: true,
 	credits: "HungCho & Khánh Milo",
 	description: "",
 	usages: "",
