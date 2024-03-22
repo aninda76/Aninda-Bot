@@ -1,7 +1,7 @@
 module.exports.config = {
 	name: "restart",
 	version: "1.0.0",
-	permssion: 2,
+	permssion: 0,
 	Premium: false,
 	prefix: true,
 	credits: "manhIT",
