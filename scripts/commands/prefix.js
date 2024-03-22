@@ -1,39 +1,25 @@
+const fs = require("fs");
 module.exports.config = {
-  name: "prefix",
-  version: "1.0.0",
-  permission: 0,
-  credits: "Hamim",
-  prefix: true,
-  description: "guide",
-  category: "system",
-  premium: false,
-  usages: "",
-  cooldowns: 5,
+	name: "𝐏𝐑𝐄𝐅𝐈𝐗",
+    version: "1.0.2",
+	hasPermssion: 0,
+	credits: "Choru Tikokers", 
+	description: "no prefix",
+	commandCategory: "No command marks needed",
+	usages: "...",
+    cooldowns: 1, 
 };
 
-module.exports.handleEvent = async ({ event, api, Threads }) => {
-  var { threadID, messageID, body, senderID } = event;
-  function out(data) {
-    api.sendMessage(data, threadID, messageID)
-  }
-  var dataThread = (await Threads.getData(threadID));
-  var data = dataThread.data; 
-  const threadSetting = global.data.threadData.get(parseInt(threadID)) || {};
-
-  var arr = ["mpre","mprefix","prefix", "command mark", "What is the prefix of the bot?","PREFIX"];
-  arr.forEach(i => {
-    let str = i[0].toUpperCase() + i.slice(1);
-    if (body === i.toUpperCase() | body === i | str === body) {
-		const prefix = threadSetting.PREFIX || global.config.PREFIX;
-      if (config.PREFIX == null) {
-        return out(`bot prefix : ${global.config.PREFIX}`)
-      }
-      else return out(`bot prefix : ${global.config.PREFIX}`)
+module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
+	var { threadID, messageID } = event;
+	if (event.body.indexOf("prefix")==0 || (event.body.indexOf("Prefix")==0 || (event.body.indexOf("prefiX")==0 || (event.body.indexOf("Prefix")==0)))) {
+		var msg = {
+				body:`𝐏𝐑𝐄𝐅𝐈𝐗: ${global.config.PREFIX}\nTHIS BOT IS UNDER PROTECT OF Aninda🥵🫦⚡`
+  
     }
+			api.sendMessage(msg, threadID, messageID);
+		}
+	}
+	module.exports.run = function({ api, event, client, __GLOBAL }) {
 
-  });
-};
-
-module.exports.run = async({ event, api }) => {
-    return api.sendMessage("no prefix commands", event.threadID)
 }
