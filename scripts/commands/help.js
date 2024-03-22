@@ -3,6 +3,7 @@ module.exports.config = {
 	version: "1.0.2",
 	permssion: 0,
 	Premium: false,
+	Prefix: true,
 	credits: "PetterSever",
 	description: "Beginner's Guide",
 	category: "system",
