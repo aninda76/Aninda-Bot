@@ -1,10 +1,10 @@
 module.exports.config = {
 	name: "help",
 	version: "1.0.2",
-	hasPermssion: 0,
+	permssion: 0,
 	credits: "PetterSever",
 	description: "Beginner's Guide",
-	commandCategory: "system",
+	category: "system",
 	usages: "[Tên module]",
 	cooldowns: 1,
 	envConfig: {
