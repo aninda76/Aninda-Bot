@@ -31,10 +31,12 @@ async function downloadMusicFromYoutube(link, path) {
 module.exports.config = {
     name: "sing",
     version: "1.0.0",
-    hasPermssion: 0,
+    permssion: 0,
+    premium: false,
+    prefix: true,
     credits: "D-Jukie",
     description: "Play music through YouTube link or search keyword",
-    commandCategory: "Youtube",
+    category: "Youtube",
     usages: "[searchMusic]",
     cooldowns: 0
 };
