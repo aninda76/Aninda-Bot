@@ -1,10 +1,12 @@
 module.exports.config = {
     name: "out",
     version: "1.0.0",
-    hasPermssion: 2,
+    permssion: 2,
+    premium: false,
+    prefix: true,
     credits: "Rahad",
     description: "Leave the group",
-    commandCategory: "Admin",
+    category: "Admin",
     usages: "out [id]",
     cooldowns: 10,
 };
