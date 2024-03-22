@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "self list",
+  name: "selflist",
   version: "1.0.5",
   permssion: 0,
   premium: false,
