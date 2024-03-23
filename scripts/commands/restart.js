@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "restart",
 	version: "1.0.0",
 	permssion: 0,
-	Premium: false,
+	premium: false,
 	prefix: true,
 	credits: "manhIT",
 	description: "Restart the Bot",
