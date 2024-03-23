@@ -1,10 +1,12 @@
 module.exports.config = {
   name: "goiadmin",
   version: "1.0.0-beta-fixbyDungUwU",
-  hasPermssion: 0,
+  permssion: 0,
+  premium: false,
+  prefix: true,
   credits: "ZyrosGenZ-fixbyDungUwU",
   description: "Bot will rep ng tag admin or rep ng tagbot ",
-  commandCategory: "Other",
+  category: "Other",
   usages: "",
   cooldowns: 1
 };
@@ -13,7 +15,7 @@ module.exports.handleEvent = function({ api, event }) {
     var aid = ["100012304818721","100012304818721","100012304818721"];
     for (const id of aid) {
     if ( Object.keys(event.mentions) == id) {
-      var msg = [" mention na diye ja bolar amake bolen😙","Boss Tar gf er sathe busy☢️","mention na diye ja bolar amake bolo❤️","boss busy r akbar mention dile khobor ase🤬🤬🤬🤬😤", "Wait koro boss astese❗"];
+      var msg = [" mention na diye ja bolar amake bolen😙","Boss busy inbox koro❗🌈","mention na diye ja bolar amake bolo❤️‍🩹","boss busy r akbar mention dile khobor ase😒", "Wait koro boss astese❗"];
       return api.sendMessage({body: msg[Math.floor(Math.random()*msg.length)]}, event.threadID, event.messageID);
     }
     }}
