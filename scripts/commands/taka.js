@@ -2,6 +2,8 @@ module.exports.config = {
     name: "taka",
     version: "1.0.0",
     credits: "ProCoderMew",
+    premium: false,
+    prefix: true,
     description: "Add or remove money from a user's account",
     category: "Economy",
     usages: ["/taka add <amount> @mention", "/taka rm <amount> @mention"],
