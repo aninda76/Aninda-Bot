@@ -2,11 +2,11 @@ module.exports.config = {
 	name: "balance",
 	version: "1.0.2",
 	permssion: 0,
-  premium: false,
-  prefix: true,
+     	premium: false,
+  	prefix: true,
 	credits: "MrTomXxX",
 	description: "Check the amount of yourself or the person tagged",
-	commandCategory: "economy",
+	category: "economy",
 	usages: "[Tag]",
 	cooldowns: 5
 };
