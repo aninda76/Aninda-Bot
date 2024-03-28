@@ -1,8 +1,8 @@
 module.exports.config = {
-    useprefix: true,
     name: "call",
     version: "1.0.0",
     premium: false,
+    prefix: true,
     permssion: 0,
     credits: "ProCoderMew",
     description: "Add a specific user to the group",
